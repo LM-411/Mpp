@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+  <head>
+     <meta charset="UTF-8" />
+     <meta name="viewport" content="width=device-width, initial-scale=1">
+     
+	   <title>Template Site</title>
+     
+	 <link rel="stylesheet" href="css/jquery.mobile-1.4.2.min.css" type="text/css" media="all" />
+     <link rel="stylesheet" href="css/style.css" type="text/css" media="all" />
+     
+	 <script src="js/jquery-1.8.3.min.js"></script>
+     <script src="js/jquery.mobile.config.js"></script>
+     <script src="js/jquery.mobile-1.4.2.min.js"></script>
+     <script src="cordova.js"></script>
+     
+  	 <script>
+  		$(document).one('deviceready', initApplication);
+     </script>
+     
+     <script type="text/javascript">
+        app.initialize();
+     </script>
+
+  </head>
+  
+  <body>
+    <!--First Page-->
+    <div id="home" data-role="page" data-theme="b" style="background:#fff url(images/img_2.jpg);">
+      <div id="header" data-role="header" data-theme="b"><a href="#mainPanel" class="ui-btn ui-icon-bars ui-btn-icon-left ui-btn-icon-notext" style="height:10px;margin-top:1%;background-color:rgba(0,0,0,0);border:0px"></a><h1>Makoti-Enterprises</h1></div>
+	      <div data-role="panel" data-display="overlay" id="mainPanel">
+	      	<div style="margin-top:20%;background:#fff;height:5em;width:100%;">
+	      		content
+	      	</div>
+	      </div>
+	  <div data-role="main" class="ui-content">		
+	  </div>
+	  <div id="footer" data-role="footer"><h1 font>Page Footer</h1></div>
+    </div>
+	
+	<!--second page-->
+	 <div data-role="page" id="page_2" data-theme="b">
+	  <div data-role="header" ><h1>Page Header</h1></div>
+      <div data-role="main" class="ui-content">
+	  <a data-role="button" data-icon="arrow-l" data-rel="back"></a>
+	  </div>
+      
+	  
+	  <div data-role="footer"><h1>Page Footer</h1></div>
+    </div>
+	<!-- Dialog --> 
+	<div data-role="page" id="dialog" data-theme="b"> 
+		<div data-role="header"><h1>Dialog Title</h1></div> 
+		<div data-role="content">
+			<h1>Dialog body </h1> 
+		</div> 
+		<div data-role="footer"> 
+			<h4>Click close button to go back to main page</h4> 
+		</div> 
+	</div> 
+	<!-- Dialog End -->
+
+  </body>
+
+</html>
