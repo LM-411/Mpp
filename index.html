@@ -1,65 +1,79 @@
 <!DOCTYPE html>
 <html>
-  <head>
+    <head>
      <meta charset="UTF-8" />
      <meta name="viewport" content="width=device-width, initial-scale=1">
-     
-	   <title>Template Site</title>
-     
-	 <link rel="stylesheet" href="css/jquery.mobile-1.4.2.min.css" type="text/css" media="all" />
-     <link rel="stylesheet" href="css/style.css" type="text/css" media="all" />
-     
-	 <script src="js/jquery-1.8.3.min.js"></script>
-     <script src="js/jquery.mobile.config.js"></script>
+    
+     <title>LM-411</title>
+     <link rel="stylesheet" href="css/jquery.mobile-1.4.2.min.css"/>
+     <link rel="stylesheet" href="css/style.css"/>
+     <script src="js/jquery-1.9.1.min.js"></script>
      <script src="js/jquery.mobile-1.4.2.min.js"></script>
-     <script src="cordova.js"></script>
-     
-  	 <script>
-  		$(document).one('deviceready', initApplication);
+
+     <script>
+        $(document).one('deviceready', initApplication);        
      </script>
      
      <script type="text/javascript">
         app.initialize();
-     </script>
-
-  </head>
-  
-  <body>
+      </script>
+    </head>
+    
+    <body>
     <!--First Page-->
-    <div id="home" data-role="page" data-theme="b" style="background:#fff url(images/img_2.jpg);">
-      <div id="header" data-role="header" data-theme="b"><a href="#mainPanel" class="ui-btn ui-icon-bars ui-btn-icon-left ui-btn-icon-notext" style="height:10px;margin-top:1%;background-color:rgba(0,0,0,0);border:0px"></a><h1>Makoti-Enterprises</h1></div>
-	      <div data-role="panel" data-display="overlay" id="mainPanel">
-	      	<div style="margin-top:20%;background:#fff;height:5em;width:100%;">
-	      		content
-	      	</div>
-	      </div>
-	  <div data-role="main" class="ui-content">		
-	  </div>
-	  <div id="footer" data-role="footer"><h1 font>Page Footer</h1></div>
-    </div>
-	
-	<!--second page-->
-	 <div data-role="page" id="page_2" data-theme="b">
-	  <div data-role="header" ><h1>Page Header</h1></div>
-      <div data-role="main" class="ui-content">
-	  <a data-role="button" data-icon="arrow-l" data-rel="back"></a>
-	  </div>
-      
-	  
-	  <div data-role="footer"><h1>Page Footer</h1></div>
-    </div>
-	<!-- Dialog --> 
-	<div data-role="page" id="dialog" data-theme="b"> 
-		<div data-role="header"><h1>Dialog Title</h1></div> 
-		<div data-role="content">
-			<h1>Dialog body </h1> 
-		</div> 
-		<div data-role="footer"> 
-			<h4>Click close button to go back to main page</h4> 
-		</div> 
-	</div> 
-	<!-- Dialog End -->
+    <div data-role="page" id="pageone" data-theme="b" style="background:#000 url(images/6.jpg);">
+      <!--main Panel-->
+      <div data-role="panel" class="panel" id="myPanel" data-position="left" data-display="overlay">
+        <ul>
+          <li class="newsfeed"><a href="#" data-role="button" class="ui-btn ui-icon-bars ui-nodisc-icon ui-btn-icon-left" id="news"title="Home">News Feed</a></li>
+          <li class="posts"><a href="#" data-role="button"  class="ui-btn ui-icon-comment ui-nodisc-icon ui-btn-icon-left" title="posts">Posts</a></li>
+          <li class="apply"><a href="#" data-role="button"  class="ui-btn ui-icon-mail ui-nodisc-icon ui-btn-icon-left" title="apply">Apply</a></li>
+          <li class="staff"><a href="#" data-role="button"  class="ui-btn ui-icon-user ui-nodisc-icon ui-btn-icon-left" title="staff">Stuff</a></li>
+          <li class="about"><a href="#" data-role="button"  class="ui-btn ui-icon-info ui-nodisc-icon ui-btn-icon-left" title="about">About</a></li>
 
-  </body>
+          <div data-role="fieldcontain" id="contain">
+            <input id="search" value="" type="search" name="password"/>
+          </div>
+        </ul>
+      </div>
+      <!--end of the main panel-->
+
+      <!--sign in dialog-->
+      <div data-role="panel" class="signPanel" data-position-fixed="true" data-swipe-close="true" id="signPanel" data-postion="right" data-display="overlay" >
+        <div data-role="content" id="content" class="content">
+          <p>hello world</p>
+        </div>
+      </div>
+      <!--end of sign in dialog-->
+
+      <!--header-->
+      <div data-role="header" id="header">
+        <a href="#myPanel" data-icon="bars" class="ui-btn-icon-left" style="background:transparent;">Options</a>
+        <a href="#signPanel" data-icon="user" class="ui-btn-icon-right" style="background:transparent;">Sign In</a>
+
+        <h1>BBHS</h1>
+      </div>
+
+      <div data-role="main" class="ui-content">
+        <p></p>
+        
+      </div>
+      <!--Welcome to bbhs div-->
+      <div data-role="header" id="signBand">
+        <content>
+          <p>Welcome to BBHS</p>
+        </content>
+      </div>
+      <!--end of welcome div-->
+      <div data-role="footer" id="footer">
+        <h1>Footer Text</h1>
+      </div>
+      <!--end of page_1-->
+
+      <!--Second Page-->
+
+      <!--End of Second Page-->
+</div>
+    </body>
 
 </html>
